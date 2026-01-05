@@ -33,12 +33,13 @@ const props = withDefaults(defineProps<OrbProps>(), {
 	<div :class="className ?? 'relative h-full w-full'">
 		<TresCanvas
 			:resize="{ debounce: resizeDebounce }"
+			:clear-color="'#ffffff'"
 			:gl="{
 				alpha: true,
 				antialias: true,
 				premultipliedAlpha: true,
-				toneMapping: NoToneMapping,
-				outputColorSpace: SRGBColorSpace,
+				// toneMapping: NoToneMapping,
+				// outputColorSpace: SRGBColorSpace,
 			}"
 		>
 			<TresPerspectiveCamera :position="[0, 0, 5]" :fov="75" />
